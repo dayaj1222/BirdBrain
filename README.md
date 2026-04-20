@@ -1,9 +1,5 @@
 # 🐦 BirdBrain
 
-> [PROJECT_DESCRIPTION_PLACEHOLDER]
-
-## Overview
-
 BirdBrain is an AI-powered Flappy Bird game where neural networks learn to play autonomously using NEAT (NeuroEvolution of Augmenting Topologies). Train intelligent agents, watch them evolve, or challenge the AI in co-op mode.
 
 ## Features
@@ -23,7 +19,7 @@ BirdBrain is an AI-powered Flappy Bird game where neural networks learn to play 
 
 ```bash
 # Clone the repository
-git clone [REPO_URL_PLACEHOLDER]
+git clone github.com/dayaj1222/BirdBrain
 cd BirdBrain
 
 # Install dependencies
@@ -81,7 +77,3 @@ BirdBrain/
 - **Algorithm:** NEAT (NeuroEvolution of Augmenting Topologies)
 - **Population Size:** 50
 - **Fitness Function:** Uses Score and Frame alive 
-_PLACEHOLDER]
-
-## Screenshots
-
