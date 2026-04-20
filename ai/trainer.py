@@ -23,11 +23,11 @@ def get_population(config):
 
 
 def eval_genomes(genomes, config, game, sprites, renderer=None, clock=None):
-
     nets = []
     birds_genomes = []
 
-    for genome in genomes:
+    # FIX: Unpack the tuple here using _, genome
+    for _, genome in genomes:
         genome.fitness = 0
         net = neat.nn.FeedForwardNetwork.create(genome, config)
         nets.append(net)
@@ -48,10 +48,12 @@ def eval_genomes(genomes, config, game, sprites, renderer=None, clock=None):
                 actions.append(0)
                 continue
 
+            # Access the pre-built network and genome by index
             output = nets[i].activate(game.get_state(bird))
             action = 1 if output[0] > 0.5 else 0
             actions.append(action)
 
+            # Update fitness on the actual genome object
             birds_genomes[i].fitness = bird.score + (bird.frame_alive * 0.1)
 
         game.update(actions)
