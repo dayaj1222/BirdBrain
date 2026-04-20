@@ -1,2 +1,3 @@
 HEIGHT = 800
+FPS = 60
 WIDTH = 1200

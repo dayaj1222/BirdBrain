@@ -10,12 +10,10 @@ class Renderer:
     def draw(self, game: Game):
         bg = game.sprites["background"]["day"]
 
-        # scale to fit height, maintain aspect ratio
         bg_h = self.screen.get_height()
         bg_w = int(bg.get_width() * (bg_h / bg.get_height()))
         bg = pygame.transform.scale(bg, (bg_w, bg_h))
 
-        # tile horizontally until screen is covered
         x = 0
         while x < self.screen.get_width():
             self.screen.blit(bg, (x, 0))
